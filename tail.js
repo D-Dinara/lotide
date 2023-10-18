@@ -7,14 +7,9 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(array) {
-  const tailArray = [];
-
-  for (let i = 1; i < array.length; i++) {
-    tailArray.push(array[i]);
-  }
+  const tailArray = array.slice(1);
   return tailArray;
 };
-
 
 const result = tail(["Hello", "Lighthouse", "Labs"]);
 assertEqual(result.length, 2);
