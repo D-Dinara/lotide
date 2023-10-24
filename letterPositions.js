@@ -35,6 +35,12 @@ const letterPositions = function(sentence) {
 
   for (let i = 0; i < sentence.length; i++) {
     const char = sentence[i];
+
+    //Chae if the character is a space
+    if (char === " ") {
+      continue;
+    }
+    
     if (results[char]) {
       results[char].push(i);
     } else {
@@ -42,12 +48,9 @@ const letterPositions = function(sentence) {
     }
   }
     
-  console.log(results);
   return results;
 
 };
-
-letterPositions("hello");
 
 const testResult = letterPositions("hello");
 
