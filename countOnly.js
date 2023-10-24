@@ -7,8 +7,7 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-//Implementing the CountOnly function. This function takes in two arguments: the first one is an array of items and the second is an object with the specific items that we need to count in the given array.
-// The function returns an object where the keys are the items from the array and the values are the counts of those items.
+// Count the occurrence of specific items in an array
 
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
