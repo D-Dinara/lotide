@@ -23,7 +23,8 @@ const eqArrays = function(arr1, arr2) {
   return true;
 };
 
-//Implementing flatten function
+//Implementing flatten function. The function takes in an array containing elements including nested arrays of elements, and return a "flattened" version of the array.
+
 const flatten = function(array) {
   const flattenedArray = [];
 
