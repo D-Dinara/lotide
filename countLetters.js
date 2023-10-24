@@ -19,13 +19,16 @@ const countLetters = function(str) {
       result[char] = 1;
     }
   }
-  console.log(result);
   return result;
 };
 
 //Testing the counLetters function
 
 const testedResult = countLetters("lighthouse in the house");
+const testedResult2 = countLetters("");
+const testedResult3 = countLetters("   ");
+const testedResult4 = countLetters("@#$$");
+const testedResult5 = countLetters(" test ");
 
 assertEqual(testedResult["l"], 1);
 assertEqual(testedResult["i"], 2);
@@ -37,5 +40,13 @@ assertEqual(testedResult["u"], 2);
 assertEqual(testedResult["s"], 2);
 assertEqual(testedResult["e"], 3);
 assertEqual(testedResult["n"], 1);
+
+assertEqual(testedResult2[""], undefined);
+
+assertEqual(testedResult3[""], undefined);
+
+assertEqual(testedResult4["$"], 2);
+
+assertEqual(testedResult5["t"], 2);
   
   
