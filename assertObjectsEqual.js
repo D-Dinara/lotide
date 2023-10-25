@@ -60,9 +60,18 @@ const multiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
 const anotherMultiColorShirtObject = { size: "medium", colors: ["red", "white"] };
 const similarMultiColorShirtObject = { colors: ["red", "blue"], size: "medium" };
 
-assertObjectsEqual(shirtObject, anotherShirtObject); //failed;
-assertObjectsEqual(shirtObject, anotherShirtObject2); //failed;
-assertObjectsEqual(multiColorShirtObject,anotherMultiColorShirtObject); // failed
-assertObjectsEqual(multiColorShirtObject,similarMultiColorShirtObject); // passed
-assertObjectsEqual(shirtObject, similarShirtObject); //passed
+// Testing the function with objects that have the same keys but different values
+assertObjectsEqual(shirtObject, anotherShirtObject); //expected to fail;
+
+// Testing the function with objects that have different keys
+assertObjectsEqual(shirtObject, anotherShirtObject2); //expected to fail;
+
+// Testing the function with objects that have arrays as values and the arrays have different elements
+assertObjectsEqual(multiColorShirtObject,anotherMultiColorShirtObject); // expected to fail
+
+// Testing the function with objects that have arrays as values and the arrays have the same elements
+assertObjectsEqual(multiColorShirtObject,similarMultiColorShirtObject); // expected to pass
+
+// Testing the function with objects that have the same keys and values
+assertObjectsEqual(shirtObject, similarShirtObject); //expected to pass
 
