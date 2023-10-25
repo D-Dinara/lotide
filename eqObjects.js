@@ -35,7 +35,7 @@ const eqObjects = function(object1, object2) {
   for (const key of object1Keys) {
 
     //Check if the value is an array
-    if (Array.isArray(object1[key]) || Array.isArray(object2[key])) {
+    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       if (!eqArrays(object1[key],object2[key])) return false;
     } else {
       if (object1[key] !== object2[key]) {
