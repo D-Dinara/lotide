@@ -38,6 +38,8 @@ const letterPositions = function(sentence) {
 
     //Check if the character is a space
     if (char !== " ") {
+
+      //If the results[char] array already exists push index to it, if not create an empty array
       results[char] = results[char] || [];
       results[char].push(i);
     }
