@@ -22,7 +22,9 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-// Returns true if both objects have identical keys with identical values.
+// This function takes two objects as arguments and returns true if they have the same contents,
+// or false if they have any mismatching contents.
+// The function supports both primitives and arrays as property values.
 const eqObjects = function(object1, object2) {
   const object1Keys = Object.keys(object1);
   const object2Keys = Object.keys(object2);
