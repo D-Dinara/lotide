@@ -1,21 +1,30 @@
 const tail = require('../tail');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 
-// Test Case: Check the returned array
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
+describe("#tail", () => {
+  it("returns 2 for the length of the tail Of ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.strictEqual(tail(['Hello', 'Lighthouse', 'Labs']).length, 2);
+  });
 
-// Test Case: Check that the original array is not modified after the function is called
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
+  it("returns 'Lighthouse' for the first element of the tail of ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.strictEqual(tail(['Hello', 'Lighthouse', 'Labs'])[0], "Lighthouse");
+  });
 
-//Test case: an array with one element. The function should return an empty array.
-const test3 = tail(["Hello"]);
-assertEqual(test3.length, 0);
+  it("returns 'Labs' for the second element of the tail of ['Hello', 'Lighthouse', 'Labs']", () => {
+    assert.strictEqual(tail(['Hello', 'Lighthouse', 'Labs'])[1], "Labs");
+  });
 
-//Test case: empty array. The tail function should return an empty array
-const test4 = tail([]);
-assertEqual(test4.length, 0);
+  it("doesn't modify the initial array", () => {
+    const words = ["Yo Yo", "Lighthouse", "Labs"];
+    tail(words);
+    assert.strictEqual(words.length, 3);
+  });
+  
+  it("returns an empty array for ['Hello']", () => {
+    assert.strictEqual(tail(['Hello']).length, 0);
+  });
+
+  it("returns an empty array for []", () => {
+    assert.strictEqual(tail([]).length, 0);
+  });
+});
