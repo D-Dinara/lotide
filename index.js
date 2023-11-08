@@ -4,6 +4,9 @@ const middle = require('./middle');
 const without = require('./without');
 const takeUntil = require('./takeUntil');
 const map = require('./map');
+const letterPositions = require('./letterPositions');
+const flatten = require('./flatten');
+const findKeyByValue = require('./findKeyByValue');
 
 module.exports = {
   head:   head,
@@ -11,4 +14,9 @@ module.exports = {
   middle: middle,
   without: without,
   takeUntil: takeUntil,
+  map: map,
+  letterPositions: letterPositions,
+  flatten: flatten,
+  findKeyByValue: findKeyByValue,
+  
 };
