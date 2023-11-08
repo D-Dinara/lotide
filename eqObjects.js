@@ -21,7 +21,7 @@ const eqObjects = function(object1, object2) {
       }
 
       //Check if the value is an object
-    } else  if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
+    } else  if (typeof object1[key] === 'object' && typeof object2[key] === 'object' && !Array.isArray(object1[key]) && !Array.isArray(object2[key])) {
 
       //Compare nested objects
       if (!eqObjects(object1[key], object2[key])) {
