@@ -1,4 +1,4 @@
-//The function assertEqual takes in two values and checks if they are equal
+//The function takes in two values and prints out a message telling if the values match or not
 
 const assertEqual = function(actual, expected) {
   if (actual === expected) {

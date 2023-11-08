@@ -1,8 +1,8 @@
 {
-  "name": "lotide",
+  "name": "@ddinara/lotide",
   "version": "1.0.0",
-  "description": "",
-  "main": "assertArraysEqual.js",
+  "description": "The Lotide project is a modular collection of functions that operate on data, namely Arrays and Objects. This project was created and published as part of author's learnings at Lighthouse Labs. ",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/D-Dinara/lotide.git"
   },
-  "author": "Dinara Dvortsova",
+  "author": "Dinara Dvortsova <dinara.dvortsova@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/D-Dinara/lotide/issues"

@@ -1,6 +1,6 @@
 const eqArrays = require('./eqArrays');
 
-//The assertArraysEqual function takes in two arrays to compare to each other and logs a message depending on the result of eqArrays' function output.
+//The function takes in two arrays, checks if they are equal and logs an appropriate message to the console
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual,expected)) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);

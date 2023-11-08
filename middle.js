@@ -1,4 +1,4 @@
-//Implementing middle function. The function takes in an array and returns the middle-most element(s) of the given array.
+//The function takes in an array and returns the middle-most element(s) of the given array.
 const middle = function(array) {
 
   //Check if arrays length is less than 3. If it is return an empty array

@@ -1,4 +1,4 @@
-// The countLetters function counts letters in a string and returns an object with characters and their quantity in the string
+// The function takes in a string, counts letters in the string and returns an object with characters and their quantity in the string
 const countLetters = function(str) {
   let result = {};
 

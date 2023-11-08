@@ -1,4 +1,4 @@
-// Count the occurrence of specific items in an array
+// The function takes in an array and an object. It returns an object containing counts of everything that the input object listed.
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
