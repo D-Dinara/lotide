@@ -8,6 +8,11 @@ const letterPositions = require('./letterPositions');
 const flatten = require('./flatten');
 const findKeyByValue = require('./findKeyByValue');
 const findKey = require('./findKey');
+const eqObjects = require('./eqObjects');
+const assertArraysEqual = require('./assertArraysEqual');
+const eqArrays = require('./eqArrays');
+const assertEqual = require('./assertEqual');
+
 
 module.exports = {
   head:   head,
@@ -20,4 +25,8 @@ module.exports = {
   flatten: flatten,
   findKeyByValue: findKeyByValue,
   findKey: findKey,
+  eqObjects: eqObjects,
+  assertArraysEqual: assertArraysEqual,
+  eqArrays: eqArrays,
+  assertEqual: assertEqual,
 };
