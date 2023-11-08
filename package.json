@@ -1,6 +1,6 @@
 {
   "name": "@ddinara/lotide",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Lotide project is a modular collection of functions that operate on data, namely Arrays and Objects. This project was created and published as part of author's learnings at Lighthouse Labs. ",
   "main": "index.js",
   "directories": {
