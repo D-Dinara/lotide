@@ -38,7 +38,7 @@ The following functions are currently implemented:
 * `countLetters(str)`: The function takes in a string, counts letters in the string and returns an object with characters and their quantity in the string
 * `letterPositions(sentence)`: The function takes in a string and returns all the indices in the string where each character is found
 * `findKeyByValue(obj,value)`: The function takes in an object and a value and returns a key on an object where its value matches a given value.
-* `eqObjects(object1, object2)`: The function takes in two objects as arguments and returns true if they have the same contents, or false if they have any mismatching contents. The function supports both primitives and arrays as property values.
+* `eqObjects(object1, object2)`: The function takes in two objects as arguments and returns true if they have the same contents, or false if they have any mismatching contents. The function supports both primitives, arrays and objects as property values.
 * `assertObjectsEqual(actual, expected)`: The function takes in two objects, checks if they are equal and logs an appropriate message to the console
 * `map(array, callback)`: The function takes in an array to map and a callback function. The function returns a new array based on the results of the callback function
 * `takeUntil(array, callback)`: The function takes in two arguments: an array and a callback. It keeps collecting items from a provided array until the callback provided returns a truthy value. The function returns a slice of the array with elements taken from the beginning.

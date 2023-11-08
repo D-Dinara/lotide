@@ -2,27 +2,32 @@ const eqArrays = require('./eqArrays');
 
 // The function takes in two objects as arguments and returns true if they have the same contents,
 // or false if they have any mismatching contents.
-// The function supports both primitives and arrays as property values.
+// The function supports both primitives, arrays and objects as property values.
+
 const eqObjects = function(object1, object2) {
   const object1Keys = Object.keys(object1);
   const object2Keys = Object.keys(object2);
 
-  //Check if the number of keys in objects are equal
   if (object1Keys.length !== object2Keys.length) {
     return false;
   }
 
   for (const key of object1Keys) {
-
-    //Check if the value is an array
-    if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
-      if (!eqArrays(object1[key],object2[key])) return false;
+    if (typeof object1[key] === 'object' && typeof object2[key] === 'object') {
+      if (!eqObjects(object1[key], object2[key])) {
+        return false;
+      }
+    } else if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
+      if (!eqArrays(object1[key], object2[key])) {
+        return false;
+      }
     } else {
       if (object1[key] !== object2[key]) {
         return false;
       }
     }
   }
+
   return true;
 };
 
