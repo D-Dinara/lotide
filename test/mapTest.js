@@ -1,20 +1,21 @@
 const map = require('../map');
-const assertArraysEqual = require('../assertArraysEqual');
+const assert = require('chai').assert;
 
-//Testing the map function
+describe("#map", () => {
 
-const words = ["ground", "control", "to", "major", " "];
+  // Testing the map function with a callback that returns the first character of each word
+  it(`"returns ["g","c","t","m"," "] for the first character of each word in ["ground", "control", "to", "major", " "]`, () => {
+    assert.deepEqual(map(["ground", "control", "to", "major", " "], word => word[0]), ["g","c","t","m"," "]);
+  });
+  
+  // Testing the map function with a callback that prepends "this is " to each word
+  it(`returns ["this is ground", "this is control", "this is to", "this is major", "this is  "] for ["ground", "control", "to", "major", " "] when the callback prepends 'this is' to each word`, () => {
+    assert.deepEqual(map(["ground", "control", "to", "major", " "], word => "this is " + word), ["this is ground", "this is control", "this is to", "this is major", "this is  "]);
+  });
 
-// Testing the map function with a callback that returns the first character of each word
-const results1 = map(words, word => word[0]);
-
-// Testing the map function with a callback that prepends "this is " to each word
-const results2 = map(words, word => "this is " + word);
-
-assertArraysEqual(["g","c","t","m"," "], results1);
-assertArraysEqual(["this is ground", "this is control", "this is to", "this is major", "this is  "], results2);
-
-// Testing the map function with a callback that multiplies each number by 2
-const numbers = [1, 2, 3, 4];
-const results3 = map(numbers, number => number * 2);
-assertArraysEqual([2, 4, 6, 8], results3);
+  // Testing the map function with a callback that multiplies each number by 2
+  it(`"returns [2, 4, 6, 8] for [1, 2, 3, 4] whaen the callback multiplies each number by 2`, () => {
+    assert.deepEqual(map([1, 2, 3, 4], number => number * 2), [2, 4, 6, 8]);
+  });
+    
+});

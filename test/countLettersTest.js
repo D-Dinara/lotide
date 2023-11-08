@@ -1,31 +1,44 @@
 const countLetters = require('../countLetters');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 
-//Testing the counLetters function
-const testedResult = countLetters("lighthouse in the house");
-assertEqual(testedResult["l"], 1);
-assertEqual(testedResult["i"], 2);
-assertEqual(testedResult["g"], 1);
-assertEqual(testedResult["h"], 4);
-assertEqual(testedResult["t"], 2);
-assertEqual(testedResult["o"], 2);
-assertEqual(testedResult["u"], 2);
-assertEqual(testedResult["s"], 2);
-assertEqual(testedResult["e"], 3);
-assertEqual(testedResult["n"], 1);
+describe("#countLetters", () => {
+  it("returns 1 for 'l' in 'lighthouse in the house'", () => {
+    assert.strictEqual(countLetters("lighthouse in the house")["l"], 1);
+  });
 
-//Test case: empty string
-const testedResult2 = countLetters("");
-assertEqual(testedResult2[""], undefined);
+  it("returns 2 for 'i' in 'lighthouse in the house'", () => {
+    assert.strictEqual(countLetters("lighthouse in the house")["i"], 2);
+  });
 
-//Test case: a string of spaces
-const testedResult3 = countLetters("   ");
-assertEqual(testedResult3[""], undefined);
+  it("returns 4 for 'h' in 'lighthouse in the house'", () => {
+    assert.strictEqual(countLetters("lighthouse in the house")["h"], 4);
+  });
+  
+  it("returns 3 for 'e' in 'lighthouse in the house'", () => {
+    assert.strictEqual(countLetters("lighthouse in the house")["e"], 3);
+  });
+  
+  it("returns 1 for 'n' in 'lighthouse in the house'", () => {
+    assert.strictEqual(countLetters("lighthouse in the house")["n"], 1);
+  });
 
-//Test case: a string of special characters
-const testedResult4 = countLetters("@#$$");
-assertEqual(testedResult4["$"], 2);
+  //Test case: empty string
+  it("returns undefined for an empty string", () => {
+    assert.strictEqual(countLetters("")[""], undefined);
+  });
 
-//Test case: a string with spaces
-const testedResult5 = countLetters(" test ");
-assertEqual(testedResult5["t"], 2);
+  //Test case: a string of spaces
+  it("returns undefined for a string of spaces", () => {
+    assert.strictEqual(countLetters("   ")[""], undefined);
+  });
+
+  //Test case: a string of special characters
+  it("returns 2 for '$' in a string of special characters '@#$$'", () => {
+    assert.strictEqual(countLetters("@#$$")["$"], 2);
+  });
+
+  //Test case: a string with spaces
+  it("returns 2 for 't' in a string with spaces ' test '", () => {
+    assert.strictEqual(countLetters(" test ")['t'], 2);
+  });
+});

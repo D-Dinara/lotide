@@ -8,4 +8,10 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+assertEqual("Lighthouse Labs", "Bootcamp"); //expected to fail
+assertEqual("Bootcamp", "Bootcamp"); //expected to pass
+assertEqual(1, 1); //expected to pass
+assertEqual(1, 3); //expected to fail
+
 module.exports = assertEqual;
+
